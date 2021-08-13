@@ -9,13 +9,13 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 0.15.1"
+      assume_role {
+          role_arn     = "arn:aws:iam::898211300587:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_AWSAdministratorAccess_7f584b5346b19e76"
+          session_name = "SESSION_NAME"
+          external_id  = "EXTERNAL_ID"
+      }
     }
   }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = var.region
 }
 
 provider "tfe" {
