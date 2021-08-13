@@ -18,8 +18,6 @@ provider "aws" {
   region = var.region
 }
 
-
-
 provider "tfe" {
   hostname = var.tfe_hostname
   AWS_ACCESS_KEY_ID = var.AWS_ACCESS_KEY_ID
